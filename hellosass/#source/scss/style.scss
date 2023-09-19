@@ -1,0 +1,77 @@
+// Файл обнуления
+@import './nullstyle';
+
+// Переменнные
+$fz:100px;
+$color_1:green;
+$color_2:blue;
+$color_3:red;
+$color_4:brown;
+$color_5:darkcyan;
+
+// Шаблоны
+%tplborder{
+   font-size: 100px;
+   border-bottom: 5px dashed red;   
+}
+
+// Миксины
+@mixin fontz($f,$c){
+   font-size: $f;
+   color: $c;
+}
+
+// Вложенность
+.block {
+   width: 300px / 960px *100%;
+   background-color: #666;
+   padding: 30px;
+   line-height: 60px;
+   .block__text {
+      font-size: $fz;
+      span {
+         color: $color_1;
+      }
+   }
+
+   &.blog--big{
+      font-size: $fz;
+   }
+}
+.link{
+   @include fontz(80px, green);
+   color: $color_2;
+   text-decoration: underline;
+   font-size: $fz;
+
+   .block &{
+      font-size: $fz;
+   }
+
+   &:hover {
+      color:$color_3;
+   }
+
+   &:active{
+      color: $color_4;
+   }
+
+   &:focus{
+      color:$color_5;
+   }
+
+   &:before{
+      content: '';
+   }
+
+   &:after{
+      content: '';
+   }
+   @extend %tplborder;
+}
+.link-2 {
+   // font-size: 80px;
+   @include fontz(50px, green);
+   @extend %tplborder;
+   border-bottom: 5px dashed #000;  
+}
