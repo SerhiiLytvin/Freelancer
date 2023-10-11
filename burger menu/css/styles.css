@@ -16,6 +16,11 @@ html, body {
   }
 }
 
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+}
+
 /*-------------------------------*/
 .header {
   position: fixed;
@@ -77,14 +82,12 @@ html, body {
 @media (max-width: 767px) {
   .header__burger {
     display: block;
-    position: relative;
     width: 30px;
     height: 20px;
     position: relative;
     z-index: 3;
   }
   .header__burger span {
-    position: absolute;
     background-color: #fff;
     position: absolute;
     left: 0;

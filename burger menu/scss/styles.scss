@@ -14,11 +14,13 @@ body {
    &.lock {
    @media (max-width:767px) {
       overflow: hidden;
+      }
    }
-}
 }
 
 .wrapper {
+   min-height: 100%;
+   overflow: hidden;
 }
 
 /*-------------------------------*/
@@ -79,14 +81,12 @@ body {
 
    @media (max-width:767px) {
       display: block;
-      position: relative;
       width: 30px;
       height: 20px;
       position: relative;
       z-index: 3;  
       
       & span {
-         position: absolute;
          background-color: #fff;
          position: absolute;
          left: 0;
