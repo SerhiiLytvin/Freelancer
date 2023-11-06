@@ -80,10 +80,6 @@ html, body {
 }
 
 /*Стили для демонстрации*/
-body {
-  background-color: #000;
-}
-
 .wrapper {
   width: 100%;
   min-height: 100%;
