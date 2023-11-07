@@ -140,3 +140,15 @@ body {
   background-color: #4fbb65;
   left: 25px;
 }
+
+.radiobuttons__item {
+  position: relative;
+  padding: 0px 0px 0px 50px;
+  font-size: 16px;
+  color: #b2b2b2;
+  margin-bottom: 20px;
+  transition: all 0.3s ease 0s;
+}
+.radiobuttons__item input {
+  display: none;
+}
