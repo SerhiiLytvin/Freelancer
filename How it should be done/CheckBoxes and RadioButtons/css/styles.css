@@ -143,12 +143,79 @@ body {
 
 .radiobuttons__item {
   position: relative;
-  padding: 0px 0px 0px 50px;
+  padding: 0px 0px 0px 45px;
   font-size: 16px;
+  line-height: 30px;
   color: #b2b2b2;
   margin-bottom: 20px;
+  cursor: pointer;
   transition: all 0.3s ease 0s;
 }
 .radiobuttons__item input {
   display: none;
+}
+.radiobuttons__item:before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #bfc0c4;
+  border-radius: 50%;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+}
+.radiobuttons__item:after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 5px;
+  top: 5px;
+  background-color: #4fbb65;
+  border-radius: 50%;
+  transition: all 0.3s ease 0s;
+  transform: scale(0);
+}
+.radiobuttons__item.active {
+  color: #000;
+}
+.radiobuttons__item.active:after {
+  transform: scale(1);
+}
+
+button {
+  line-height: 60px;
+  display: inline-block;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  padding: 0px 30px;
+  font-size: 18px;
+  border-radius: 25px;
+  background-color: #bfc0c4;
+  position: relative;
+  transition: all 0.3s ease 0s;
+}
+button span {
+  position: relative;
+  z-index: 2;
+}
+button:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 25px;
+  background-color: #4fbb65;
+  transform: scale(0);
+  transition: all 0.3s ease 0s;
+}
+button:hover {
+  color: #fff;
+}
+button:hover:before {
+  transform: scale(1);
 }
